@@ -2,13 +2,14 @@ interface User {
   id: number;
   firstName: string;
   lastName: string;
+  isAdmin: boolean;
   /**
    * How do we ensure that role is only one of:
    * - 'admin'
    * - 'user'
    * - 'super-admin'
    */
-  role: string;
+   role: "admin" | "user" | "super-admin";
 }
 
 export const defaultUser: User = {
